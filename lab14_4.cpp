@@ -18,4 +18,16 @@ int main(){
 	return 0;
 }
 
-//Write definition of shuffle() here 
+void shuffle(int &a,int &b,int &c,int &d){
+	int x[]={a,b,c,d};
+
+	for(int j=0;j<4;j++){
+		int y =rand()%4;
+		int z =rand()%4;
+		int temp = x[y];
+		x[y] = x[z];
+		x[z] = temp;
+	}
+	a = x[0],b = x[1],c = x[2],d = x[3];
+
+} 
